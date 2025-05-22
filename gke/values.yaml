@@ -1,0 +1,14 @@
+containers:
+  image: "us-central1-docker.pkg.dev/pjdrc20240804/pjdrc-artifact/pjdrc-server:latest"
+  resources:
+    requests:
+      cpu: "2"
+      memory: 4000Mi
+    limits:
+      cpu: "3"
+      memory: 6000Mi
+service:
+  type: LoadBalancer
+gameserver:
+  health:
+    disabled: true
